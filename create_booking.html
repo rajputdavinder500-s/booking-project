@@ -1,0 +1,31 @@
+{% block body %}
+
+<form action="{% url 'polls:create_booking' user_id %}" method="post">
+    <h1>Hi : {{username}}</h1>
+    {% csrf_token %}
+    <br>
+    <h2> No. of seats left : {{seats_left}}</h2>
+    <div class="container">
+        <label for ="seats"><b>Seats to be booked</b></label>
+        <input type="number" placeholder="Enter no. of seats" name="seats" required >
+
+
+        <label for ="date"><b>Date</b></label>
+        <input type="date" placeholder="Enter todays date" name="date" required>
+
+        <button type="submit">PAY</button>
+
+        <br></br>
+
+        <label for ="amount"><b>Your Total Amount is : </b></label>
+        <label for="ans">{{total_amount}}</label>
+</form>
+<form action={{back_url}}>
+
+    <button>Back</button>
+  
+</form>
+       
+    </form>
+    {% endblock %}
+    <!-- http://127.0.0.1:8000/parkbooking/9/my_booking/create_booking/ -->

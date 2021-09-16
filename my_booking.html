@@ -1,0 +1,25 @@
+<h1>Hello user : {{username}}, 
+    Your id : {{user_id}}</h1>
+
+<table>
+    <TR>
+        <TH>id  </TH>
+        <TH>SEATS  </TH>
+        <TH>DATE  </TH>
+        <TH>AMOUNT  </TH>
+    </TR>
+        {% for item in items %} 
+        <TR>
+
+        <TD class="c2">{{ forloop.counter }}</TD>
+        <TD class="c3">{{item.seats}}</TD>
+        <TD class="c4"><SPAN>{{item.date}}</SPAN></TD>
+        <TD class="c5"><SPAN>{{item.amount}}</SPAN></TD>
+        
+        </TR>
+
+        
+    {% endfor %}
+</table>
+<a href=" http://127.0.0.1:8000/polls/{{user_id}}/my_booking/create_booking/">
+<button>submit</button>

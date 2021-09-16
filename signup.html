@@ -1,0 +1,19 @@
+{% block body %}
+<form action="{% url 'polls:signup' %}" method="post">
+    {% csrf_token %}
+    <div class="container">
+        <label for ="firstname"><b>First Name</b></label>
+        <input type="text" placeholder="Enter Firstname" name="firstname" required>
+
+        <label for ="lastname">Last Name</b></label>
+        <input type="text" placeholder="Enter Lastname" name="lastname" required>
+
+        <label for ="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+
+        <label for ="password"><b>Password</b></label>
+        <input type="text" placeholder="Password" name="password" required>
+
+        <button type="submit">Sign Up</button>
+    </form>
+    {% endblock %}
